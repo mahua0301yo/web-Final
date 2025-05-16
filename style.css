@@ -1,0 +1,74 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #fafafa; color: #333;
+    }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: #fff; padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      text-align: center; font-size: 1.5rem; font-weight: bold;
+    }
+    .stories {
+      display: flex; justify-content: center; overflow-x: auto;
+      background: #fff; padding: 0.75rem 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+    .story {
+      flex: none; margin: 0 0.75rem; text-align: center; cursor: pointer;
+    }
+    .story .icon {
+      width: 60px; height: 60px; border: 2px solid #007AFF;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; color: #007AFF; margin-bottom: 0.25rem;
+    }
+    .story.active .icon {
+      background: #007AFF; color: #fff;
+    }
+    .story .label { font-size: 0.85rem; }
+
+    .search-bar {
+      background: #fff; padding: 0.75rem 1rem; border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+    .search-bar input {
+      width: 100%; max-width: 500px; padding: 0.5rem 1rem;
+      border: 1px solid #ccc; border-radius: 20px; font-size: 1rem;
+    }
+
+    .feed {
+      max-width: 600px; margin: 0 auto; padding: 1rem 0;
+    }
+    .movie-card {
+      background: #fff; border: 1px solid #eee;
+      border-radius: 12px; overflow: hidden;
+      margin-bottom: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .movie-card img {
+      width: 100%; display: block; object-fit: cover;
+    }
+    .movie-card .info {
+      padding: 0.75rem 1rem;
+    }
+    .movie-card .category-tag {
+      font-size: 0.85rem; color: #007AFF; margin-bottom: 0.5rem;
+    }
+    .movie-card .title {
+      font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem;
+    }
+    .movie-card .year {
+      font-size: 0.9rem; color: #666;
+    }
+    .movie-card .plot {
+      font-size: 0.95rem;
+      color: #444;
+      margin-top: 0.5rem;
+      line-height: 1.4;
+    }
+    .spinner {
+      width: 40px; height: 40px;
+      border: 4px solid #eee; border-top-color: #007AFF;
+      border-radius: 50%; animation: spin 1s linear infinite;
+      margin: 1rem auto; display: none;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
